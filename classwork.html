@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Studnt Page</title>
+</head>
+<body>
+    <h1 id="mainTitle" ondblclick="mainrepair()">My Student Page</h1>
+    <p id="message">I am learning java script</p>
+    <p id="pageStatus">Waiting for the page to load...</p>
+    <button id="helloButton" onclick="alert('Welcome to my page!')">Say Hello</button>
+    <button id="nameButton" onclick="welcomename()" >Say my name</button>
+    <button id="messageButton" onclick="change()">Change my message</button>
+    <div id="hoverBox" onmouseover="divstyles()" onmouseout="divnotstyles()" style="background-color: lightgray; padding: 25px; width: 250px;">Move your mouse here</div>
+    <ul>
+        <li>Crochet</li>
+        <li>Chess</li>
+        <li>Photography</li>
+    </ul>
+    <script>
+        function welcomename(){
+            x=prompt('what is your name?')
+            document.getElementById('mainTitle').textContent='Welcome '+x+'!';
+        }
+        function change(){
+            document.getElementById('message').textContent='I can make my webpage interactive!';
+        }
+        function divstyles(){
+            document.getElementById('hoverBox').style.backgroundColor='orange';
+            document.getElementById('hoverBox').textContent='You found me!';
+        }
+        function divnotstyles(){
+            document.getElementById('hoverBox').style.backgroundColor='lightgray';
+            document.getElementById('hoverBox').textContent='Move your mouse here';
+        }
+        window.onload = function load(){
+            document.getElementById('pageStatus').textContent='The page is ready!';
+        }
+        function mainrepair(){
+            document.getElementById('mainTitle').textContent='My Student Page';
+        }
+    </script>
+</body>
+</html>
